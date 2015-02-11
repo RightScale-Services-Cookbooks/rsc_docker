@@ -22,7 +22,7 @@ end
 docker_container 'mysql' do
   detach true
   port '3306:3306'
-  env 'SETTINGS_FLAVOR=local'
+  env 'MYSQL_ROOT_PASSWORD=wordpress'
   volume '/mnt/docker:/docker-storage'
   action :run
 end
@@ -30,7 +30,8 @@ end
 docker_container 'wordpress' do
   detach true
   port '80:80'
-  env 'SETTINGS_FLAVOR=local'
+  env 'WORDPRESS_DB_NAME=wordpress'
   volume '/mnt/docker:/docker-storage'
+  link 'mysql'
   action :run
 end
