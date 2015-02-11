@@ -32,6 +32,6 @@ docker_container 'wordpress' do
   port '80:80'
   env 'WORDPRESS_DB_NAME=wordpress'
   volume '/mnt/docker:/docker-storage'
-  link 'mysql'
+  link 'mysql:mysql'
   action :run
 end
