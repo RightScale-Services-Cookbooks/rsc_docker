@@ -10,3 +10,4 @@ depends "docker"
 depends "marker"
 
 recipe "rsc_docker::default", "docker default"
+recipe "rsc_docker::wordpress", "wordpress docker install"
