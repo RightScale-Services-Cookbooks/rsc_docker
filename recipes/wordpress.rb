@@ -9,7 +9,10 @@ directory '/mnt/docker' do
   action :create
 end
 
-docker_image 'wordpress'
+docker_image 'wordpress' do
+  cmd_timeout 1800
+  action :pull
+end
 
 docker_container 'wordpress' do
   detach true
