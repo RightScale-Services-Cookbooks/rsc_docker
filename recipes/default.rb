@@ -20,5 +20,7 @@ marker "recipe_start_rightscale" do
   template "rightscale_audit_entry.erb"
 end
 
+node.default['docker']['logfile']='/var/log/docker.log'
+
 include_recipe "docker::default"
 marker "rsc_docker::default end"
