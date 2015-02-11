@@ -9,4 +9,4 @@ version          '0.1.0'
 depends "docker"
 depends "marker"
 
-recipe "docker::default", "docker default"
+recipe "rsc_docker::default", "docker default"
