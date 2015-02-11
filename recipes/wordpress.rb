@@ -30,7 +30,7 @@ end
 docker_container 'wordpress' do
   detach true
   port '80:80'
-  env 'WORDPRESS_DB_NAME=wordpress'
+  env 'WORDPRESS_DB_NAME=wordpress;WORDPRESS_DB_HOST=localhost'
   volume '/mnt/docker:/docker-storage'
   link 'mysql:mysql'
   action :run
