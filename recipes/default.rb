@@ -16,3 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+marker "rsc_docker::default start"
+include_recipe "docker::default"
+marker "rsc_docker::default end"
