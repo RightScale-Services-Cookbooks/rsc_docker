@@ -9,9 +9,9 @@ directory '/mnt/docker' do
   action :create
 end
 
-docker_image 'library/wordpress'
+docker_image 'wordpress'
 
-docker_container 'library/wordpress' do
+docker_container 'wordpress' do
   detach true
   port '80:80'
   env 'SETTINGS_FLAVOR=local'
